@@ -29,7 +29,12 @@ public class Car{
     }
 
     public void go(int length){
-        engine.setDistance(engine.getDistance() + length);
+        if(speed > 0){
+            engine.setDistance(engine.getDistance() + length);
+            System.out.println("A distance of " + length + " km was covered.");
+        }else{
+            System.out.println("Engine is off.");
+        }
     }
 
     public void printInfo(){

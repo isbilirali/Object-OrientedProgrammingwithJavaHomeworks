@@ -14,8 +14,10 @@ public class SportsCar extends Car {
     }
 
     public void printInfo(){
+        System.out.println("******************************************************");
         super.printInfo();
         System.out.println("Color is " + color + " and max speed is " + maxSpeed);
+        System.out.println("******************************************************");
     }
 
 }

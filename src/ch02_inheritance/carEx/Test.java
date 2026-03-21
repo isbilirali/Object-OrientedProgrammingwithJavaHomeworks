@@ -11,5 +11,11 @@ public class Test {
         SportsCar hellcat = new SportsCar("Dodge","Challanger SRT Hellcat","2023",0,v8,"Dark Black",327);
 
         hellcat.printInfo();
+
+        hellcat.accelarete(150);
+        hellcat.go(250);
+        hellcat.stop();
+
+        hellcat.printInfo();
     }
 }
