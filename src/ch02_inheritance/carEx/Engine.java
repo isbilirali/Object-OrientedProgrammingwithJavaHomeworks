@@ -8,12 +8,12 @@ public class Engine {
     private int cylinder;
     private int hp;
     private int torque;
-    private String fuelType;
+    private FuelType fuelType;
     private int distance;
     private boolean hasBeenMaintenance;
     private boolean hasBeenOverhauled;
 
-    public Engine(double volume, int cylinder, int hp, int torque, String fuelType, int distance, boolean hasBeenMaintenance, boolean hasBeenOverhauled) {
+    public Engine(double volume, int cylinder, int hp, int torque, FuelType fuelType, int distance, boolean hasBeenMaintenance, boolean hasBeenOverhauled) {
         this.volume = volume;
         this.cylinder = cylinder;
         this.hp = hp;
@@ -55,7 +55,7 @@ public class Engine {
         System.out.println(cylinder + " cylinder");
         System.out.println(hp + " hp");
         System.out.println(torque + " Nm torque");
-        System.out.println("Fuel type is " + fuelType + "and the engine has traveled " + distance + " km so far." );
+        System.out.println("Fuel type is " + fuelType.name() + " and the engine has traveled " + distance + " km so far." );
     }
 
     public int getCylinder() {
@@ -66,11 +66,11 @@ public class Engine {
         this.cylinder = cylinder;
     }
 
-    public String getFuelType() {
+    public FuelType getFuelType() {
         return fuelType;
     }
 
-    public void setFuelType(String fuelType) {
+    public void setFuelType(FuelType fuelType) {
         this.fuelType = fuelType;
     }
 
@@ -108,3 +108,4 @@ public class Engine {
 
 
 }
+
