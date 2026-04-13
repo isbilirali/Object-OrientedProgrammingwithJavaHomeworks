@@ -10,11 +10,6 @@ public class Motorcycle extends Vehicle{
 
     private int wheels;
     private String color;
-    private static final int MAX_SPEED;
-
-    static{
-        MAX_SPEED = 350;
-    }
 
     {
         wheels = 2;
@@ -25,18 +20,4 @@ public class Motorcycle extends Vehicle{
         this.color = color;
     }
 
-    public void accelarete(int newSpeed){
-        if(newSpeed>0){
-            if(newSpeed < MAX_SPEED){
-                speed = newSpeed;
-            }else{
-                speed = MAX_SPEED;
-            }
-            System.out.println("Speed : " + speed);
-        }else{
-            stop();
-            System.out.println("Error! Engine has stopped.");
-        }
-
-    }
 }

@@ -10,13 +10,10 @@ public class Car extends Vehicle{
 
     private int wheels;
     private int door;
-    private static final int MAX_SPEED;
+
 
     {
         wheels = 4;
-    }
-    static{
-        MAX_SPEED = 200;
     }
 
     public Car(String make, String model, String year, int speed, int distance, int door) {
@@ -24,20 +21,6 @@ public class Car extends Vehicle{
         this.door = door;
     }
 
-    public void accelarete(int newSpeed){
-        if(newSpeed>0){
-            if(newSpeed < MAX_SPEED){
-                speed = newSpeed;
-            }else{
-                speed = MAX_SPEED;
-            }
-            System.out.println("Speed : " + speed);
-        }else{
-            stop();
-            System.out.println("Error! Engine has stopped.");
-        }
-
-    }
 
     public int getWheels() {
         return wheels;

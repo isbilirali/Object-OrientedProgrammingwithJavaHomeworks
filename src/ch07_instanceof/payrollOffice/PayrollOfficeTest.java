@@ -1,0 +1,53 @@
+package ch07_instanceof.payrollOffice;
+
+import ch07_instanceof.payrollOffice.Domain.*;
+
+/*
+1. Bir önceki bölümdeki factory.office.TestPayrollOffice örneğine gidin:
+a. PayrollOfice’in paySalary(Employee e) metodunu değiştirin:
+Maaşını almaya gelen Director ise PayrollOfice “Hoş geldiniz!”, Manager ise “Müdürüm!” desin.
+b. PayrollOffice uygulamasında pattern matching kullanın.PayrollOfice’in paySalary(Employee e) metodununda
+Director ve Manager nesnelerini bulmak için pattern matchingten faydalanın.
+c. Önceki PayrollOffice uygulamasında switch cümlesi ya da ifadesini pattern matching ile kullanın.
+d. case’den sonra gelen pattern labellarında when ile nesneler arasında değişik seçimler yapın.
+ */
+
+public class PayrollOfficeTest {
+
+    public static void main(String[] args) {
+        PayrollOffice payrollOffice = new PayrollOffice();
+
+        Employee e1 = new Employee(1, "Ali", 8, "Production");
+        payrollOffice.paySalary(e1);  // Employee employee = e1;
+
+        Employee m1 = new Manager(2, "Fatma", 3, "Production", "Production");
+        payrollOffice.paySalary(m1); // Employee employee = m1;
+
+        Employee d1 = new Director(3, "Mehmet", 20, "Management", "Management", 3000);
+        payrollOffice.paySalary(d1);
+
+        System.out.println();
+
+        payrollOffice.paySalary(new Employee(4, "Salih", 12, "Sales"));
+        payrollOffice.paySalary(new Manager(5, "Niyazi", 13, "Sales", "Sales"));
+        payrollOffice.paySalary(new Director(6, "Kenan", 22, "Management", "Management", 5000));
+
+
+        Engineer eng1 = new Engineer(4, "Akin", 12, "Production", "X ARGE");
+        payrollOffice.paySalary(eng1);
+
+        e1 = m1;
+        payrollOffice.paySalary(e1);
+//
+        e1 = d1;
+        payrollOffice.paySalary(e1);
+//
+//		m1 = d1;
+//		payrollOffice.paySalary(m1);
+//
+//		payrollOffice.paySalary(new Director(3, "Mehmet", 20, "Management", "Management", 3000));
+//
+//		Engineer e = new Engineer(0, null, 0, null, null);
+//		Employee e10= e;
+    }
+}
