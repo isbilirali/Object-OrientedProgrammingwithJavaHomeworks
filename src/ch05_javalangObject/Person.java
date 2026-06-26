@@ -10,6 +10,7 @@ b. equals() ve hashCode() metotlarının tutarlı olup olmadıklarını kontrol 
 c. toString() metodunda StringBuilder kullanın.
  */
 
+
 public class Person {
     private int    id;
     private String email;

@@ -7,5 +7,6 @@ public class Rose extends Flower{
     public Rose(String name, int height, String color, boolean hasThorns) {
         super(name, height, color);
         this.hasThorns = hasThorns;
+        System.out.println("in Rose()");
     }
 }

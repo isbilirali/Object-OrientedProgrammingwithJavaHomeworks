@@ -5,7 +5,7 @@ import ch06_polymorphism.shapes.domain.*;
 /*
 2. Bir metoda Object tipinde bir argüman geçmenin anlamlı olduğu örnekler veriniz.
  */
-public class ObjecInstancetAsAParameter {
+public class ObjectAsAParameter {
 
     public void printInfoWithIfBlocks(Object s) {
         if (s instanceof Circle c) {

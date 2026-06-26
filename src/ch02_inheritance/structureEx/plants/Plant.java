@@ -8,6 +8,7 @@ public class Plant {
     public Plant(String name , int height){
         this.name = name;
         this.height = height;
+        System.out.println("in Plant()");
     }
 
     public void grow(){

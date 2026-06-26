@@ -7,6 +7,7 @@ public class Flower extends Plant{
     public Flower(String name , int height , String color){
         super(name,height);
         this.color = color;
+        System.out.println("in Flower()");
     }
 
     public String getColor() {
