@@ -12,7 +12,6 @@ ve bu durumu belirtmek üzere metodun -1 döndürmesini sağlayın.
 
 public class Main {
 
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -22,8 +21,6 @@ public class Main {
         int index  = scanner.nextInt();
 
         System.out.println(getElement(arr,index));
-
-
 
     }
 
